@@ -1,0 +1,242 @@
+@import "nullstyle.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+// ----------------navbar
+
+.menu {
+   height: 58px;
+}
+
+ul {
+   list-style-type: none;
+   margin: 0 0 0;
+   overflow: hidden;
+   background-color: #ffffff;
+   text-align: center;
+   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+   padding: 0;
+   align-items: center;
+   height: 58px;
+}
+
+li {
+   display: inline-block;
+}
+
+li a {
+   display: block;
+   padding: 20px 25px;
+   text-decoration: none;
+   font-family: Lato;
+   font-size: 15px;
+   line-height: 1.2;
+   font-weight: 500;
+   color: #3c3c3c;
+   text-transform: uppercase;
+}
+
+.active {
+   font-weight: 700;
+   color: #ada074;
+}
+
+li a:hover {
+   background-color: rgba(184, 184, 184, 0.212);
+}
+// --------------------------------------------------------------------- Вторая страница
+body {
+   font-family: Lato;
+}
+
+.about {
+   &__body {
+      max-width: 823px;
+      // padding: 0 5vw;
+      height: 770px;
+      margin: 0 auto;
+   }
+   &__header {
+      margin: 0 0px 7vh 0px;
+   }
+   &__title {
+      margin: 12vh 30px;
+      padding: auto 5vh;
+   }
+   &__text {
+      max-width: 688px;
+      color: #868585;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 25.89px;
+      margin: 0px auto;
+   }
+   &__row {
+      display: grid;
+      font-size: 0;
+      grid-template-columns: repeat(12, 1fr);
+   }
+}
+
+@media screen and (max-width: 2000px) {
+   .item-about {
+      grid-column: span 4;
+   }
+}
+@media screen and (max-width: 480px) {
+   .item-about {
+      grid-column: span 12;
+      padding: 5vh 0 0 0;
+   }
+   .about__body {
+      padding: 0 5vw;
+   }
+   .about__header {
+      margin: 0 0 5vh 0;
+   }
+}
+
+.title {
+   font-size: 34px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 8.95px;
+   position: relative;
+   text-align: center;
+   padding: 0px 0px 30px 0px;
+   &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      bottom: 0;
+      height: 1px;
+      left: 50%;
+      background-color: #000;
+      margin: 0px 0px 0px -25px;
+   }
+}
+
+.item-about {
+   &__icon {
+      border-radius: 50%;
+      width: 92px;
+      height: 92px;
+      border: 2px solid #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto 40px auto;
+   }
+   &__title {
+      text-align: center;
+      color: #000000;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 3.52px;
+      margin: 0px 0px 35px 0px;
+   }
+   &__text {
+      text-align: center;
+      color: #868585;
+      line-height: 26px;
+      font-weight: 300;
+      font-size: 14px;
+   }
+}
+
+// -------------------------Первая страница
+
+.first {
+   &__body {
+      background-image: url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      background-color: #464646;
+      height: 100vh;
+   }
+   &__main {
+      max-width: 823px;
+      margin: 0 auto;
+   }
+
+   &__blur {
+      background: rgba(22, 22, 22, 0.3);
+      backdrop-filter: blur(2px);
+      height: 100vh;
+   }
+
+   &__logo {
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      text-align: center;
+      justify-self: auto;
+   }
+   &__name1 {
+      font-family: Lato;
+      font-size: 34px;
+      line-height: 40px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+   }
+   &__name2 {
+      font-size: 26px;
+      font-weight: 400;
+      text-transform: none;
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+      padding: 0 0 30px 0;
+      &:after {
+         content: "";
+         position: absolute;
+         width: 50px;
+         bottom: 0;
+         height: 1px;
+         left: 50%;
+         background-color: #ffffff;
+         margin: 0px 0px 0px -25px;
+      }
+   }
+   &__footer {
+      font-family: Lato;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+   }
+}
+#button {
+   bottom: 10%;
+   position: absolute;
+}
+
+.button1 {
+   border-radius: 20%;
+   border: 1px solid rgb(255, 255, 255);
+   height: 47px;
+   width: 182px;
+   background: transparent;
+   font-family: Lato;
+   font-size: 16px;
+   line-height: 1.2;
+   font-weight: 400;
+   letter-spacing: 0.06em;
+   color: #ffffff;
+}
+
+.material-symbols-outlined {
+   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+   color: #ffffff;
+   position: absolute;
+   bottom: 5%;
+   text-align: center;
+}
+
+#strelka {
+   text-align: center;
+}
